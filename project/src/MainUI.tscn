@@ -1,21 +1,128 @@
-[gd_scene format=2]
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/BAKE.png" type="Texture" id=1]
+[ext_resource path="res://assets/BAKE_pressed.png" type="Texture" id=2]
+[ext_resource path="res://assets/BOWL.png" type="Texture" id=3]
+[ext_resource path="res://assets/EGG.png" type="Texture" id=4]
+[ext_resource path="res://assets/BUTTER.png" type="Texture" id=5]
+[ext_resource path="res://assets/FLOUR.png" type="Texture" id=6]
+[ext_resource path="res://assets/SUGAR.png" type="Texture" id=7]
+[ext_resource path="res://assets/FLOUR_pressed.png" type="Texture" id=8]
+[ext_resource path="res://assets/EGG_pressed.png" type="Texture" id=9]
+[ext_resource path="res://assets/SUGAR_pressed.png" type="Texture" id=10]
+[ext_resource path="res://assets/BUTTER_pressed.png" type="Texture" id=11]
+[ext_resource path="res://src/MainUI.gd" type="Script" id=12]
+[ext_resource path="res://assets/MILK.png" type="Texture" id=13]
+[ext_resource path="res://assets/MILK_pressed.png" type="Texture" id=14]
+[ext_resource path="res://assets/soft_font.tres" type="DynamicFont" id=15]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="BakeButton" type="TextureButton" parent="."]
+margin_left = 270.0
+margin_top = 153.0
+margin_right = 452.0
+margin_bottom = 244.0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 362, 645 )
+scale = Vector2( 0.348341, 0.348341 )
+texture = ExtResource( 3 )
+
+[node name="ButtonEgg" type="TextureButton" parent="."]
+margin_left = 477.0
+margin_top = 763.0
+margin_right = 990.0
+margin_bottom = 1020.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonButter" type="TextureButton" parent="."]
+margin_left = 141.0
+margin_top = 869.0
+margin_right = 654.0
+margin_bottom = 1116.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonFlour" type="TextureButton" parent="."]
+margin_left = 255.0
+margin_top = 766.0
+margin_right = 768.0
+margin_bottom = 1013.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonSugar" type="TextureButton" parent="."]
+margin_left = 32.0
+margin_top = 763.0
+margin_right = 545.0
+margin_bottom = 1014.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonMilk" type="TextureButton" parent="."]
+margin_left = 371.0
+margin_top = 870.0
+margin_right = 884.0
+margin_bottom = 1117.0
+rect_scale = Vector2( 0.4, 0.4 )
+texture_normal = ExtResource( 13 )
+texture_pressed = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MessageLabel" type="Label" parent="."]
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -68.5
-margin_top = -7.0
-margin_right = 68.5
-margin_bottom = 7.0
-text = "Elodie's Baking Game"
+margin_top = 400.0
+margin_bottom = 421.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_colors/font_color = Color( 0.921569, 0.427451, 0.537255, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 15 )
 align = 1
 valign = 1
+percent_visible = 1.66667
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinScreen" type="Panel" parent="."]
+margin_left = -850.0
+margin_top = 38.0
+margin_right = -130.0
+margin_bottom = 709.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
